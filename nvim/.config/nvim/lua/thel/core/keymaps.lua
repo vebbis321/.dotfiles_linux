@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 
 -- back to netrw
-keymap.set("n", "<leader>pv", vim.cmd.Ex)
+keymap.set("n", "<leader>fe", vim.cmd.Ex)
 
 -- let cursor stay in place after paste
 keymap.set("n", "J", "mzJ`z")
