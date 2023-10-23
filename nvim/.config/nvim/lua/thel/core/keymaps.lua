@@ -5,6 +5,9 @@ local keymap = vim.keymap -- for conciseness
 -- back to netrw
 keymap.set("n", "<leader>fe", vim.cmd.Ex)
 
+-- jump to previous file
+keymap.set("n", "<C-b>", "<C-^>")
+
 -- let cursor stay in place after paste
 keymap.set("n", "J", "mzJ`z")
 
@@ -27,11 +30,12 @@ keymap.set("v", "<c-s>", "<ESC>:w<CR>") -- normal mode
 
 -- greatest remap ever
 -- foo bar
-keymap.set("x", "<leader>p", '"_dP')
+keymap.set("x", "<leader>p", [["_dP]])
 
 -- yank into buffer
 keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 keymap.set("n", "<leader>Y", [["+Y]])
+
 keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- delete to void register
@@ -56,3 +60,6 @@ keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- swift
 keymap.set("n", "<leader>xb", ":!swift build<CR>")
 keymap.set("n", "<leader>xr", ":!swift run<CR>")
+
+-- lazy
+keymap.set("n", "<leader>lz", ":Lazy<CR>")

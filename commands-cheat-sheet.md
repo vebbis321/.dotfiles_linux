@@ -3,42 +3,40 @@
 ## netrw
 
 ```lua
-keymap.set("n", "<leader>fe", vim.cmd.Ex)
+"n", "<leader>fe"
 d: new folder
 %: new file
 ```
 
-## nvim
-
-### telescope
+## telescope
 
 ```lua
-keymap.set("n", "<leader>gf", vim.cmd.Ex)
-keymap.set("n", "<leader>pf", vim.cmd.Ex)
-keymap.set("n", "<leader>sf", vim.cmd.Ex)
+"n", "<C-p>"
+"n", "<leader>pf"
+"n", "<leader>sf"
 ```
 
-### harpoon
+## harpoon
 
 ```lua
-keymap.set("n", "<leader>a", # append
-keymap.set("n", "<C-e>", # open meny
-keymap.set("n", "<C-a>", # go to 1
-keymap.set("n", "<C-s>", # go to 2
+"n", "<leader>a", # append
+"n", "<C-e>", # open meny
+"n", "<C-a>", # go to 1
+"n", "<C-s>", # go to 2
 ```
 
-### nvim-cmp
+## nvim-cmp
 
 ```lua
-<CR> completion
-<C-k> previous
-<C-j> next
-<C-c> cancel
+<CR> # completion
+<C-k> # previous
+<C-j> # next
+<C-c> # cancel
 ```
 
-### lspconfig
+## lspconfig
 
 ```lua
-<gd> jump to definition
-
+"n", "<gd>", # jump to definition
+"n", "K",  # hover
 ```
