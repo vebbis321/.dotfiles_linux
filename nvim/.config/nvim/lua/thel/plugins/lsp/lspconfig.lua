@@ -66,11 +66,11 @@ return {
 		end
 
 		-- configure sourcekit-lsp  server
-		lspconfig["sourcekit"].setup({
-			cmd = { "sourcekit-lsp" },
-			filetypes = { "swift", "c", "cpp", "objective-c", "objective-cpp" },
-			root_dir = lspconfig.util.root_pattern("Package.swift", ".git"),
-		})
+		--lspconfig["sourcekit"].setup({
+		--cmd = { "sourcekit-lsp" },
+		--filetypes = { "swift", "c", "cpp", "objective-c", "objective-cpp" },
+		--root_dir = lspconfig.util.root_pattern("Package.swift", ".git"),
+		--})
 
 		lspconfig["clangd"].setup({
 			on_attach = on_attach,

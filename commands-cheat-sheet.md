@@ -8,6 +8,13 @@ d: new folder
 %: new file
 ```
 
+## remaps
+
+```lua
+"n", "<leader>s", # replace on current word
+"n", "<leader>x", # CHMOOOD
+```
+
 ## telescope
 
 ```lua
@@ -21,8 +28,8 @@ d: new folder
 ```lua
 "n", "<leader>a", # append
 "n", "<C-e>", # open meny
-"n", "<C-a>", # go to 1
-"n", "<C-s>", # go to 2
+"n", "<C-h>", # go to 1
+"n", "<C-j>", # go to 2
 ```
 
 ## nvim-cmp

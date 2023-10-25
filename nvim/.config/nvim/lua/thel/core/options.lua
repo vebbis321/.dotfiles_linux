@@ -27,7 +27,6 @@ opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 -- backspace
 opt.backspace = "indent,eol,start"
 
-
 -- appearance
 opt.termguicolors = true
 opt.signcolumn = "yes"
@@ -39,6 +38,5 @@ opt.background = "dark"
 opt.scrolloff = 8
 opt.isfname:append("@-@")
 opt.updatetime = 50
-
 
 vim.g.mapleader = " "
