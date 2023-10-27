@@ -26,10 +26,13 @@ d: new folder
 ## harpoon
 
 ```lua
-"n", "<leader>a", # append
-"n", "<C-e>", # open meny
-"n", "<C-h>", # go to 1
-"n", "<C-j>", # go to 2
+"n", "<leader>h", # append
+"n", "<C-e>", # open menu
+
+"n", "<C-a>", # go to 1
+"n", "<C-s>", # go to 2
+"n", "<C-z>", # go to 3
+"n", "<C-x>", # go to 3
 ```
 
 ## nvim-cmp

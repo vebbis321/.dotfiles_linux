@@ -18,6 +18,10 @@ opt.wrap = false
 opt.hlsearch = false
 opt.incsearch = true
 
+-- split windows
+opt.splitright = true -- split vertical window to the right
+opt.splitbelow = true -- split horizontal window to the bottom
+
 -- backing
 opt.swapfile = false
 opt.backup = false
