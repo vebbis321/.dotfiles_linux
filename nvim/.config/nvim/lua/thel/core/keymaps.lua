@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 
 -- back to netrw
-keymap.set("n", "<leader>fe", vim.cmd.Ex)
+keymap.set("n", "<leader>jf", vim.cmd.Ex)
 
 -- jump to previous file
 keymap.set("n", "<C-b>", "<C-^>")
@@ -55,7 +55,6 @@ keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- swift
 keymap.set("n", "<leader>xb", ":!swift build<CR>")

@@ -12,7 +12,6 @@ plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/supercharge"
 plug "Aloxaf/fzf-tab"
-plug "jeffreytse/zsh-vi-mode"
 plug "romkatv/powerlevel10k"
 
 # Load and initialise completion system
@@ -21,7 +20,7 @@ compinit
 
 #alias
 alias nv, vim, vi ='nvim'
-
+alias get_idf='. $HOME/Documents/Programming/C/Mylearning/ESP32_Course/esp-idf/export.sh'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

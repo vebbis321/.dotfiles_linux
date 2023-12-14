@@ -8,6 +8,9 @@ font pango:Hack Nerd Font 8
 # launch polybar 
 exec_always ~/.config/polybar/launch.sh &
 
+#picom
+exec_always --no-startup-id picom
+
 # set wallpaper
 exec_always nitrogen --restore
 
