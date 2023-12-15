@@ -4,6 +4,18 @@ local keymap = vim.keymap -- for conciseness
 
 -- back to netrw
 keymap.set("n", "<leader>jf", vim.cmd.Ex)
+-- Netrw stuff
+vim.api.nvim_create_autocmd("filetype", {
+	pattern = "netrw",
+	desc = "Better mappings for netrw",
+	callback = function()
+		local bind = function(lhs, rhs)
+			vim.keymap.set("n", lhs, rhs, { remap = true, buffer = true })
+		end
+
+		bind("<c-l>", ":TmuxNavigateRight<cr>")
+	end,
+})
 
 -- jump to previous file
 keymap.set("n", "<C-b>", "<C-^>")
