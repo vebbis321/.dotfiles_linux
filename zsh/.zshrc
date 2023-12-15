@@ -37,4 +37,4 @@ clear-scrollback-and-screen () {
   zle clear-screen
 }
 zle -N clear-scrollback-and-screen
-bindkey -v "^[o" clear-scrollback-and-screen
+bindkey "^[o" clear-scrollback-and-screen
