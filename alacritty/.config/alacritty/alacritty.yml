@@ -39,6 +39,10 @@ selection:
 
 shell:
   program: /usr/bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux-sessionizer"
 
 key_bindings:
   - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
