@@ -13,7 +13,8 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/supercharge"
 plug "Aloxaf/fzf-tab"
 plug "romkatv/powerlevel10k"
-plug "jeffreytse/zsh-vi-mode"
+
+bindkey -v
 
 # Load and initialise completion system
 autoload -Uz compinit
@@ -22,7 +23,6 @@ compinit
 #alias
 alias nv, vim, vi ='nvim'
 alias get_idf='. $HOME/Documents/Programming/C/Mylearning/ESP32_Course/esp-idf/export.sh'
-alias cl ='clear'
 
 source /usr/share/fzf/shell/key-bindings.zsh
 
@@ -38,3 +38,10 @@ clear-scrollback-and-screen () {
 }
 zle -N clear-scrollback-and-screen
 bindkey "^[o" clear-scrollback-and-screen
+
+tmux-s () {
+  tmux-sessionizer
+}
+zle -N tmux-s
+bindkey "^f" tmux-s
+
