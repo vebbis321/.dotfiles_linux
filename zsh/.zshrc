@@ -15,14 +15,16 @@ plug "Aloxaf/fzf-tab"
 plug "romkatv/powerlevel10k"
 
 bindkey -v
+export KEYTIMEOUT=1
 
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
 
 #alias
-alias nv, vim, vi ='nvim'
-alias get_idf='. $HOME/Documents/Programming/C/Mylearning/ESP32_Course/esp-idf/export.sh'
+alias nv='nvim'
+alias get_idf='. $HOME/documents/programming/c/esp32-course/esp-idf/export.sh'
+alias cl='clear'
 
 source /usr/share/fzf/shell/key-bindings.zsh
 
@@ -37,11 +39,12 @@ clear-scrollback-and-screen () {
   zle clear-screen
 }
 zle -N clear-scrollback-and-screen
-bindkey "^[o" clear-scrollback-and-screen
+bindkey -M vicmd "^o" clear-scrollback-and-screen
+bindkey "^o" clear-scrollback-and-screen
 
 tmux-s () {
   tmux-sessionizer
 }
 zle -N tmux-s
-bindkey "^f" tmux-s
+bindkey -M vicmd "^f" tmux-s
 

@@ -42,7 +42,7 @@ shell:
   args:
     - -l
     - -c
-    - "tmux attach || tmux-sessionizer"
+    - "tmux attach || tmux"
 
 key_bindings:
   - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
