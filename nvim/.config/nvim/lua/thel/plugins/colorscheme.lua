@@ -5,6 +5,7 @@ return {
 		config = function()
 			require("kanagawa").setup({
 				transparent = true,
+				theme = "dragon",
 				overrides = function(colors)
 					local theme = colors.theme
 					return {
@@ -23,7 +24,7 @@ return {
 						PmenuThumb = { bg = theme.ui.bg_p2 },
 
 						NormalFloat = { bg = theme.ui.bg_p1 },
-						FloatBorder = { bg = "none" },
+						FloatBorder = { bg = theme.ui.bd_dim },
 						FloatTitle = { bg = "none" },
 
 						-- Save an hlgroup with dark background and dimmed foreground

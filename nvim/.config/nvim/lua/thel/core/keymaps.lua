@@ -61,11 +61,6 @@ keymap.set("n", "Q", "<nop>")
 keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
-keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
-
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- swift
@@ -74,3 +69,5 @@ keymap.set("n", "<leader>xr", ":!swift run<CR>")
 
 -- lazy
 keymap.set("n", "<leader>lz", ":Lazy<CR>")
+-- mason
+keymap.set("n", "<leader>ms", ":Mason<CR>")

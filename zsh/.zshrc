@@ -20,6 +20,7 @@ plug "romkatv/powerlevel10k"
 alias nv='nvim'
 alias get_idf='. $HOME/documents/programming/c/esp32-course/esp-idf/export.sh'
 alias cl='clear'
+alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
 
 source /usr/share/fzf/shell/key-bindings.zsh
 
@@ -34,13 +35,21 @@ clear-scrollback-and-screen () {
   zle clear-screen
 }
 zle -N clear-scrollback-and-screen
-bindkey -M vicmd "^o" clear-scrollback-and-screen
-bindkey "^o" clear-scrollback-and-screen
+# bindkey -M vicmd "^x" clear-scrollback-and-screen
+# bindkey "^x" clear-scrollback-and-screen
 
-tmux-s () {
+tmux-sess () {
   tmux-sessionizer
 }
-zle -N tmux-s
-bindkey -M vicmd "^f" tmux-s
-bindkey "^f" tmux-s
+zle -N tmux-sess
+bindkey -M vicmd "^f" tmux-sess
+bindkey "^f" tmux-sess
 
+tldr-s () {
+    tldr-search.sh
+    zle reset-prompt
+}
+
+zle -N tldr-s
+bindkey -M vicmd "^t" tldr-s
+bindkey "^t" tldr-s
