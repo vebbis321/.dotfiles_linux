@@ -11,7 +11,7 @@ return {
 
 		local keymap = vim.keymap
 
-		keymap.set("v", "s", "<Plug>SnipRun", { silent = true })
+		keymap.set("v", "sr", "<Plug>SnipRun", { silent = true })
 		keymap.set("n", "<leader>sr", "<Plug>SnipRun", { silent = true })
 	end,
 }

@@ -17,6 +17,7 @@ opt.wrap = false
 -- search settings
 opt.hlsearch = false
 opt.incsearch = true
+opt.inccommand = "split"
 
 -- split windows
 opt.splitright = true -- split vertical window to the right
@@ -34,13 +35,17 @@ opt.backspace = "indent,eol,start"
 -- appearance
 opt.termguicolors = true
 opt.signcolumn = "yes"
-opt.colorcolumn = "120"
-opt.textwidth = 118
+opt.colorcolumn = "100"
+opt.textwidth = 98
 opt.cursorline = true
 opt.background = "dark"
 
-opt.scrolloff = 8
+opt.scrolloff = 999
 opt.isfname:append("@-@")
 opt.updatetime = 50
+
+-- nois
+opt.virtualedit = "block"
+opt.ignorecase = true
 
 vim.g.mapleader = " "
