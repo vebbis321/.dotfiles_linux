@@ -48,8 +48,6 @@ return {
 		-- used to enable autocompletion (assign to every lsp server config)
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 
-		local util = require("lspconfig.util")
-
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		-- (not in youtube nvim video)
 		local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
@@ -93,24 +91,9 @@ return {
 		})
 
 		-- configure python server
-		lspconfig.pyright.setup({
-			on_attach = on_attach,
+		lspconfig["pyright"].setup({
 			capabilities = capabilities,
-			settings = {
-				python = {
-					stubPath = vim.fn.stdpath("data") .. "/lazy/python-type-stubs",
-					analysis = {
-						autoSearchPaths = true,
-						useLibraryCodeForTypes = false,
-						diagnosticMode = "openFilesOnly",
-						reportUnusedExpression = "none",
-					},
-				},
-			},
-			root_dir = function(fname)
-				return util.root_pattern(".git", "setup.py", "setup.cfg", "pyproject.toml", "requirements.txt")(fname)
-					or util.path.dirname(fname)
-			end,
+			on_attach = on_attach,
 		})
 
 		lspconfig["ltex"].setup({
@@ -129,7 +112,6 @@ return {
 			on_attach = on_attach,
 			capabilities = capabilities,
 			filetypes = { "markdown", "quarto" },
-			root_dir = util.root_pattern(".git", ".marksman.toml", "_quarto.yml"),
 		})
 
 		-- configure lua server (with special settings)
