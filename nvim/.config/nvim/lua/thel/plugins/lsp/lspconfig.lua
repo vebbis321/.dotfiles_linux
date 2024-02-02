@@ -97,21 +97,13 @@ return {
 		})
 
 		lspconfig["ltex"].setup({
-			on_attach = on_attach,
+			filetypes = { "markdown", "md" },
 			settings = {
 				ltex = {
-					language = "en-US",
-					additionalRules = {
-						languageModel = "~/ngrams/",
-					},
+					language = "en",
 				},
 			},
-		})
-
-		lspconfig.marksman.setup({
 			on_attach = on_attach,
-			capabilities = capabilities,
-			filetypes = { "markdown", "quarto" },
 		})
 
 		-- configure lua server (with special settings)

@@ -11,7 +11,22 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import = "thel.plugins" }, { import = "thel.plugins.lsp" } }, {
+require("lazy").setup({
+	{
+		import = "thel.plugins",
+		cond = vim.g.vscode == nil,
+	},
+
+	{
+		import = "thel.plugins.vscode",
+		cond = vim.g.vscode ~= nil,
+	},
+
+	{
+		import = "thel.plugins.lsp",
+		cond = vim.g.vscode == nil,
+	},
+}, {
 	install = {
 		colorscheme = { "kanagawa" },
 	},

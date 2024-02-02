@@ -47,6 +47,15 @@ return {
 				{ name = "luasnip" }, -- snippets
 				{ name = "buffer" }, -- text within current buffer
 				{ name = "path" }, -- file system paths
+				{
+					name = "spell",
+					option = {
+						keep_all_entries = false,
+						enable_in_context = function()
+							return true
+						end,
+					},
+				},
 			}),
 			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {

@@ -47,5 +47,7 @@ opt.updatetime = 50
 -- nois
 opt.virtualedit = "block"
 opt.ignorecase = true
+opt.spell = true
+opt.spelllang = { "en_us" }
 
 vim.g.mapleader = " "

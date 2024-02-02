@@ -18,7 +18,8 @@ plug "romkatv/powerlevel10k"
 
 #alias
 alias nv='nvim'
-alias get_idf='. $HOME/documents/programming/c/esp32-course/esp-idf/export.sh'
+alias p='python'
+alias get_idf='. $HOME/documents/programming/c/esp/esp-idf/export.sh'
 alias cl='clear'
 alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
 
