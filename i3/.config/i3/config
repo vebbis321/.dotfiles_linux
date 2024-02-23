@@ -8,11 +8,6 @@ font pango:Hack Nerd Font 8
 # launch polybar 
 exec_always ~/.config/polybar/launch.sh &
 
-# copy past macos style
-bindsym --release Mod4+c exec --no-startup-id xdotool key --clearmodifiers Ctrl+Insert
-bindsym --release Mod4+x exec --no-startup-id xdotool key --clearmodifiers Shift+Delete
-bindsym --release Mod4+v exec --no-startup-id xdotool key --clearmodifiers Shift+Insert
-
 #picom
 exec_always --no-startup-id picom
 
