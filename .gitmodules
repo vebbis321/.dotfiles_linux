@@ -10,3 +10,6 @@
 [submodule "scripts/.local/bin/bin"]
 	path = scripts/.local/bin/bin
 	url = https://github.com/vebbis321/bin
+[submodule "scripts/.local/bin"]
+	path = scripts/.local/bin
+	url = https://github.com/vebbis321/bin
