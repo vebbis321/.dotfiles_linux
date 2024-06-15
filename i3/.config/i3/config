@@ -8,6 +8,10 @@ font pango:Hack Nerd Font 8
 # launch polybar 
 exec_always ~/.config/polybar/launch.sh &
 
+# for norwegian yes
+exec_always --no-startup-id "setxkbmap -layout us -variant mac"
+
+
 #picom
 exec_always --no-startup-id picom
 
